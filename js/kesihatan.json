@@ -1,0 +1,50 @@
+[
+    {
+      "dimensi_kesihatan": "Liputan perkhidmatan kesihatan sekolah",
+      "tahun_2000an_awal": "~mid-90 %",
+      "tahun_2019_2020": ">97 %",
+      "tahun_2021_2024": ">97 %",
+      "trend": "Stabil/naik sedikit",
+      "catatan": "Program wujud sejak 1967, liputan konsisten >97 % lima tahun kebelakangan ini"
+    },
+    {
+      "dimensi_kesihatan": "Obesiti & berat badan berlebihan",
+      "tahun_2000an_awal": "Data tidak konsisten awal 2000-an",
+      "tahun_2019_2020": "–",
+      "tahun_2021_2024": "2021: Tahun 1 = 9.5 %, Tahun 6 = 21.6 %, Tingkatan 3 = 10.6 %",
+      "trend": "Meningkat",
+      "catatan": "Tertinggi di Terengganu; Perak catat 33 % obesiti"
+    },
+    {
+      "dimensi_kesihatan": "Imunisasi pelajar",
+      "tahun_2000an_awal": "–",
+      "tahun_2019_2020": "~97 %",
+      "tahun_2021_2024": "MR/DT/ATT masih >97 %",
+      "trend": "Stabil",
+      "catatan": "HPV (Tingkatan 1 perempuan) jatuh 50 % pada 2021 akibat COVID-19 & bekalan vaksin"
+    },
+    {
+      "dimensi_kesihatan": "Saringan Talasemia (Tingkatan 4)",
+      "tahun_2000an_awal": "–",
+      "tahun_2019_2020": "–",
+      "tahun_2021_2024": "2021: 25.7 % disyaki pembawa, 12.5 % anemia zat besi",
+      "trend": "Kekal tinggi",
+      "catatan": "Julat 23–27 % & 11–13 % sejak beberapa tahun"
+    },
+    {
+      "dimensi_kesihatan": "Kesihatan mental pelajar & mahasiswa",
+      "tahun_2000an_awal": "2012: 7.9 % mengalami masalah",
+      "tahun_2019_2020": "2019: 7.9 % (≈424 000 orang)",
+      "tahun_2021_2024": "2023: 16.5 % (≈922 000 orang)",
+      "trend": "Meningkat 2× ganda",
+      "catatan": "NHMS 2023; tingkah laku & cubaan bunuh diri juga naik"
+    },
+    {
+      "dimensi_kesihatan": "Keciciran sekolah (kesan sampingan kesihatan)",
+      "tahun_2000an_awal": "–",
+      "tahun_2019_2020": "2020: 1.33 % (menengah)",
+      "tahun_2021_2024": "2024: 0.64 % (menengah)",
+      "trend": "Turun",
+      "catatan": "KPM melaporkan trend penurunan keciciran"
+    }
+  ]

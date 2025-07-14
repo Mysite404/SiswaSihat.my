@@ -1,0 +1,124 @@
+{
+    "soalan": [
+      {
+        "id": 1,
+        "teks": "Saya berasa tertekan apabila menghadapi peperiksaan besar."
+      },
+      {
+        "id": 2,
+        "teks": "Saya sukar untuk fokus semasa belajar."
+      },
+      {
+        "id": 3,
+        "teks": "Saya rasa tidak cukup masa untuk menyiapkan tugasan."
+      },
+      {
+        "id": 4,
+        "teks": "Saya rasa tertekan apabila mendapat markah rendah."
+      },
+      {
+        "id": 5,
+        "teks": "Saya rasa tidak disokong oleh rakan-rakan saya."
+      },
+      {
+        "id": 6,
+        "teks": "Saya rasa sukar untuk bergaul dengan orang sekeliling."
+      },
+      {
+        "id": 7,
+        "teks": "Saya sering rasa sunyi walaupun dikelilingi orang ramai."
+      },
+      {
+        "id": 8,
+        "teks": "Saya rasa dipinggirkan dalam kumpulan sosial saya."
+      },
+      {
+        "id": 9,
+        "teks": "Saya rasa tekanan apabila ibu bapa meletakkan harapan yang tinggi."
+      },
+      {
+        "id": 10,
+        "teks": "Saya rasa keluarga saya tidak memahami perasaan saya."
+      },
+      {
+        "id": 11,
+        "teks": "Saya terpaksa memendam perasaan apabila bersama keluarga."
+      },
+      {
+        "id": 12,
+        "teks": "Saya rasa beban untuk menjaga nama baik keluarga."
+      },
+      {
+        "id": 13,
+        "teks": "Saya sering rasa letih walaupun tidak melakukan banyak aktiviti fizikal."
+      },
+      {
+        "id": 14,
+        "teks": "Saya kerap mengalami sakit kepala atau ketegangan badan."
+      },
+      {
+        "id": 15,
+        "teks": "Saya jarang mendapat tidur yang cukup dan berkualiti."
+      },
+      {
+        "id": 16,
+        "teks": "Saya kurang selera makan atau makan secara berlebihan apabila stres."
+      },
+      {
+        "id": 17,
+        "teks": "Saya mudah marah atau hilang kawalan emosi."
+      },
+      {
+        "id": 18,
+        "teks": "Saya rasa kecewa terhadap diri sendiri tanpa sebab yang jelas."
+      },
+      {
+        "id": 19,
+        "teks": "Saya sering menangis atau ingin menangis secara tiba-tiba."
+      },
+      {
+        "id": 20,
+        "teks": "Saya pernah berfikir untuk menyerah atau mengalah dalam hidup."
+      }
+    ],
+    "penilaian": [
+      {
+        "skor_min": 0,
+        "skor_max": 20,
+        "tahap": "Sangat Rendah",
+        "cadangan": "Tahniah! Anda mengawal tekanan dengan baik. Teruskan gaya hidup sihat dan seimbang."
+      },
+      {
+        "skor_min": 21,
+        "skor_max": 40,
+        "tahap": "Rendah",
+        "cadangan": "Anda mungkin mengalami sedikit tekanan. Amalkan senaman ringan, tidur mencukupi dan rehat yang berkualiti."
+      },
+      {
+        "skor_min": 41,
+        "skor_max": 60,
+        "tahap": "Sederhana",
+        "cadangan": "Tekanan anda berada pada tahap sederhana. Cuba kenal pasti puncanya dan urus masa dengan lebih teratur. Berbual dengan rakan atau kaunselor boleh membantu."
+      },
+      {
+        "skor_min": 61,
+        "skor_max": 80,
+        "tahap": "Tinggi",
+        "cadangan": "Tekanan anda agak tinggi. Anda disarankan untuk berehat seketika dari tekanan, melakukan aktiviti menenangkan seperti berjalan, berzikir, atau hobi. Pertimbangkan untuk berbincang dengan guru atau kaunselor."
+      },
+      {
+        "skor_min": 81,
+        "skor_max": 100,
+        "tahap": "Sangat Tinggi",
+        "cadangan": "Tahap tekanan anda sangat tinggi dan berisiko. Segera dapatkan bantuan kaunseling profesional. Jangan memendam perasaan seorang diri. Kesihatan mental anda amat penting."
+      }
+    ],
+    "skala": {
+      "1": "Sangat Tidak Setuju",
+      "2": "Tidak Setuju",
+      "3": "Neutral",
+      "4": "Setuju",
+      "5": "Sangat Setuju"
+    }
+  }
+  

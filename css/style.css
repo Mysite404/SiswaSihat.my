@@ -686,7 +686,7 @@ footer {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: #fff;
+    background: #a5ffaa;
     font-weight: 600;
     color: #64748b;
 }
@@ -694,7 +694,7 @@ footer {
 .scale-option input[type="radio"]:checked+label {
     background: linear-gradient(45deg, #3b82f6, #10b981);
     border-color: #3b82f6;
-    color: #fff;
+    color: #a5ffaa;
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }
@@ -714,7 +714,7 @@ footer {
 .scale-option input[type="radio"]:checked+label {
     background: linear-gradient(45deg, #3b82f6, #10b981);
     border-color: #3b82f6;
-    color: #fff;
+    color: #a5ffaa;
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }

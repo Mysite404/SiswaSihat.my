@@ -63,55 +63,23 @@
     <script src="js/script.js"></script>
     <script>
         // Soalan langsung dalam JavaScript jika fetch tidak berfungsi
-        const soalanData = {
-            "soalan": [
-                {
-                    "kategori": "Tekanan Akademik:",
-                    "soalan": [
-                        "Saya berasa terbeban dengan jumlah kerja sekolah/universiti",
-                        "Saya sering bimbang tentang keputusan peperiksaan",
-                        "Saya sukar mengimbangi masa antara akademik dan kehidupan peribadi",
-                        "Saya berasa tidak cukup persediaan untuk menghadapi peperiksaan"
-                    ]
-                },
-                {
-                    "kategori": "Tekanan Sosial:",
-                    "soalan": [
-                        "Saya berasa sukar menyesuaikan diri dengan rakan sebaya",
-                        "Saya sering berasa terasing dalam kumpulan sosial",
-                        "Saya bimbang tentang apa yang orang lain fikirkan tentang saya",
-                        "Saya mengalami kesukaran untuk membuat kawan baru"
-                    ]
-                },
-                {
-                    "kategori": "Masalah Keluarga:",
-                    "soalan": [
-                        "Saya mengalami konflik dengan ahli keluarga",
-                        "Masalah kewangan keluarga memberi tekanan kepada saya",
-                        "Saya berasa tidak mendapat sokongan emosi daripada keluarga",
-                        "Saya bimbang tentang keadaan kesihatan ahli keluarga"
-                    ]
-                },
-                {
-                    "kategori": "Kesihatan:",
-                    "soalan": [
-                        "Saya sering berasa letih tanpa sebab yang jelas",
-                        "Saya mengalami masalah tidur (sukar tidur, kerap terjaga)",
-                        "Saya sering mengalami sakit kepala atau sakit badan",
-                        "Saya mempunyai selera makan yang tidak menentu"
-                    ]
-                },
-                {
-                    "kategori": "Emosi:",
-                    "soalan": [
-                        "Saya mudah marah atau kecewa dengan perkara kecil",
-                        "Saya sering berasa sedih atau tidak bermotivasi",
-                        "Saya sukar menumpukan perhatian atau membuat keputusan",
-                        "Saya berasa tidak berdaya atau putus asa tentang masa depan"
-                    ]
+        async function loadHealthData() {
+                try {
+                    const soalanData = await fetch('js/soalan.json');
+                    if (!response.ok) {
+                        throw new Error('Failed to load data');
+                    }
+                    const data = await response.json();
+                    populateTable(data);
+                } catch (error) {
+                    console.error('Error loading health data:', error);
+                    document.getElementById('healthDataTable').innerHTML = `
+                        <div class="error-message">
+                            <p>⚠️ Tidak dapat memuat data kesihatan. Sila cuba lagi nanti.</p>
+                        </div>
+                    `;
                 }
-            ]
-        };
+            }
 
         // Muat soalan ketika halaman dimuat
         document.addEventListener('DOMContentLoaded', function() {

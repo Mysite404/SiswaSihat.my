@@ -672,6 +672,11 @@ footer {
     gap: 0.5rem;
 }
 
+.scale-option label:hover {
+    border-color: #a4ffb3;
+    background: rgba(66, 153, 225, 0.1);
+}
+
 .scale-option input[type="radio"] {
     display: none;
 }

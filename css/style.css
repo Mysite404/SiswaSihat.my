@@ -684,6 +684,15 @@ footer {
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }
 
+.radio input[type="radio"]:checked+label{
+    background: linear-gradient(#a5ffaa);
+    border-color: #3b82f6;
+    color: #a5ffaa;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+
 .scale-option label {
     width: 50px;
     height: 50px;

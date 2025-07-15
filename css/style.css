@@ -704,14 +704,6 @@ footer {
     color: #64748b;
 }
 
-.radio:checked+label {
-    background: #aae4ad;
-    border-color: #3b82f6;
-    color: #ffffff;
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
-}
-
 .scale-labels {
     display: flex;
     justify-content: space-between;

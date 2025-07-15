@@ -708,5 +708,5 @@ footer {
 }
 
 .scale-option input[type="radio"] {
-    display: none;
+    display: contents;
 }

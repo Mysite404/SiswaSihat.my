@@ -673,7 +673,7 @@ footer {
 }
 
 .scale-option label:hover {
-    border-color: #a4ffb3;
+    border-color: #86b98e;
     background: rgba(66, 153, 225, 0.1);
 }
 
@@ -682,7 +682,7 @@ footer {
 }
 
 .scale-option input[type="radio"]:checked+label {
-    background: linear-gradient(#a5ffaa);
+    background: #bde6bf;
     border-color: #3b82f6;
     color: #a5ffaa;
     transform: scale(1.1);

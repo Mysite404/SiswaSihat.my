@@ -681,7 +681,7 @@ footer {
     display: none;
 }
 
-.scale-option input[type="radio"]:checked+label {
+.scale-option input[type="radio"]:checked + label {
     background: #bde6bf;
     border-color: #3b82f6;
     color: #a5ffaa;

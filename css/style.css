@@ -692,7 +692,7 @@ footer {
 }
 
 .scale-option input[type="radio"]:checked+label {
-    background: linear-gradient(#10b981);
+    background: linear-gradient(#a5ffaa);
     border-color: #3b82f6;
     color: #a5ffaa;
     transform: scale(1.1);

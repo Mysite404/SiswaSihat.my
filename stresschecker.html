@@ -73,34 +73,43 @@
         });
 
         function loadQuestions() {
-            const container = document.getElementById('questionsContainer');
-            let questionNumber = 1;
+    const container = document.getElementById('questionsContainer');
+    let questionNumber = 1;
 
-            soalanData.soalan.forEach(category => {
-                const categoryDiv = document.createElement('div');
-                categoryDiv.className = 'form-group';
-                categoryDiv.innerHTML = `<h2>${category.kategori}</h2><br>`;
+    soalanData.soalan.forEach(category => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'form-group';
+        categoryDiv.innerHTML = `<h2>${category.kategori}</h2><br>`;
 
-                category.soalan.forEach(question => {
-                    const questionDiv = document.createElement('div');
-                    questionDiv.className = 'question';
-                    questionDiv.innerHTML = `
-                        <p>${questionNumber}. ${question}</p>
-                        <div class="scale-option">
-                            <label><input class="radio" type="radio" name="q${questionNumber}" value="1" required> 1</label>
-                            <label><input class="radio" type="radio" name="q${questionNumber}" value="2"> 2</label>
-                            <label><input class="radio" type="radio" name="q${questionNumber}" value="3"> 3</label>
-                            <label><input class="radio" type="radio" name="q${questionNumber}" value="4"> 4</label>
-                            <label><input class="radio" type="radio" name="q${questionNumber}" value="5"> 5</label>
-                        </div>
-                    `;
-                    categoryDiv.appendChild(questionDiv);
-                    questionNumber++;
-                });
+        category.soalan.forEach(question => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+            questionDiv.innerHTML = `
+                <p>${questionNumber}. ${question}</p>
+                <div class="scale-option">
+                    <input type="radio" id="q${questionNumber}-1" name="q${questionNumber}" value="1" required>
+                    <label for="q${questionNumber}-1">1</label>
+                    
+                    <input type="radio" id="q${questionNumber}-2" name="q${questionNumber}" value="2">
+                    <label for="q${questionNumber}-2">2</label>
+                    
+                    <input type="radio" id="q${questionNumber}-3" name="q${questionNumber}" value="3">
+                    <label for="q${questionNumber}-3">3</label>
+                    
+                    <input type="radio" id="q${questionNumber}-4" name="q${questionNumber}" value="4">
+                    <label for="q${questionNumber}-4">4</label>
+                    
+                    <input type="radio" id="q${questionNumber}-5" name="q${questionNumber}" value="5">
+                    <label for="q${questionNumber}-5">5</label>
+                </div>
+            `;
+            categoryDiv.appendChild(questionDiv);
+            questionNumber++;
+        });
 
-                container.appendChild(categoryDiv);
-            });
-        }
+        container.appendChild(categoryDiv);
+    });
+}
 
         function calculateStress() {
             const form = document.getElementById('stressForm');

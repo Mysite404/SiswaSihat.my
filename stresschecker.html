@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ms">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siswa Sihat - Pemeriksa Stress</title>
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -15,9 +18,9 @@
                 <img src="logo.png" alt="">
                 <span>Siswa Sihat</span>
             </a>
-            
+
             <button class="hamburger" aria-label="Menu">☰</button>
-            
+
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Utama</a></li>
                 <li><a href="stresschecker.html">Pemeriksa Stress</a></li>
@@ -33,7 +36,7 @@
             <h1>Pemeriksa Tahap Stress</h1>
             <p class="lead">Isi borang ini untuk menilai tahap stress anda berdasarkan situasi semasa.</p>
             <p>1 ialah Sangat Setuju, 5 Sangat Tidak Setuju</p>
-            
+
         </section>
 
         <form class="question-group" id="stressForm">
@@ -62,71 +65,44 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/script.js"></script>
     <script>
-        // Soalan langsung dalam JavaScript jika fetch tidak berfungsi
-        const soalanData = {
-            "soalan": [
-                {
-                    "kategori": "Tekanan Akademik:",
-                    "soalan": [
-                        "Saya berasa terbeban dengan jumlah kerja sekolah/universiti",
-                        "Saya sering bimbang tentang keputusan peperiksaan",
-                        "Saya sukar mengimbangi masa antara akademik dan kehidupan peribadi",
-                        "Saya berasa tidak cukup persediaan untuk menghadapi peperiksaan"
-                    ]
-                },
-                {
-                    "kategori": "Tekanan Sosial:",
-                    "soalan": [
-                        "Saya berasa sukar menyesuaikan diri dengan rakan sebaya",
-                        "Saya sering berasa terasing dalam kumpulan sosial",
-                        "Saya bimbang tentang apa yang orang lain fikirkan tentang saya",
-                        "Saya mengalami kesukaran untuk membuat kawan baru"
-                    ]
-                },
-                {
-                    "kategori": "Masalah Keluarga:",
-                    "soalan": [
-                        "Saya mengalami konflik dengan ahli keluarga",
-                        "Masalah kewangan keluarga memberi tekanan kepada saya",
-                        "Saya berasa tidak mendapat sokongan emosi daripada keluarga",
-                        "Saya bimbang tentang keadaan kesihatan ahli keluarga"
-                    ]
-                },
-                {
-                    "kategori": "Kesihatan:",
-                    "soalan": [
-                        "Saya sering berasa letih tanpa sebab yang jelas",
-                        "Saya mengalami masalah tidur (sukar tidur, kerap terjaga)",
-                        "Saya sering mengalami sakit kepala atau sakit badan",
-                        "Saya mempunyai selera makan yang tidak menentu"
-                    ]
-                },
-                {
-                    "kategori": "Emosi:",
-                    "soalan": [
-                        "Saya mudah marah atau kecewa dengan perkara kecil",
-                        "Saya sering berasa sedih atau tidak bermotivasi",
-                        "Saya sukar menumpukan perhatian atau membuat keputusan",
-                        "Saya berasa tidak berdaya atau putus asa tentang masa depan"
-                    ]
+        async function loadSoalanData() {
+            try {
+                const response = await fetch('soalan.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load question data');
                 }
-            ]
-        };
+                const soalanData = await response.json();
+                return soalanData;
+            } catch (error) {
+                console.error('Error loading question data:', error);
+                return null;
+            }
+        }
+
+        // Gunakan fungsi ini untuk memuat soalan
+        loadSoalanData().then(data => {
+            if (data) {
+                // Di sini anda boleh memproses data seperti sebelumnya
+                console.log(data.soalan);
+                // Panggil fungsi anda yang menggunakan data ini
+                // contoh: muatSoalan(data);
+            }
+        });
 
         // Muat soalan ketika halaman dimuat
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             loadQuestions();
         });
 
         function loadQuestions() {
             const container = document.getElementById('questionsContainer');
             let questionNumber = 1;
-            
+
             soalanData.soalan.forEach(category => {
                 const categoryDiv = document.createElement('div');
                 categoryDiv.className = 'form-group';
                 categoryDiv.innerHTML = `<h2>${category.kategori}</h2><br>`;
-                
+
                 category.soalan.forEach(question => {
                     const questionDiv = document.createElement('div');
                     questionDiv.className = 'question';
@@ -143,7 +119,7 @@
                     categoryDiv.appendChild(questionDiv);
                     questionNumber++;
                 });
-                
+
                 container.appendChild(categoryDiv);
             });
         }
@@ -151,12 +127,12 @@
         function calculateStress() {
             const form = document.getElementById('stressForm');
             const inputs = form.querySelectorAll('input[type="radio"]:checked');
-            
+
             if (inputs.length < 20) {
                 alert('Sila jawab semua soalan sebelum mengira tahap stress.');
                 return;
             }
-            
+
             let totalScore = 0;
             const categoryScores = {
                 "Tekanan Akademik": 0,
@@ -166,29 +142,29 @@
                 "Emosi": 0
             };
             const questionsPerCategory = 4;
-            
+
             inputs.forEach((input, index) => {
                 const value = parseInt(input.value);
                 totalScore += value;
-                
+
                 // Kira skor kategori
                 const categoryIndex = Math.floor(index / questionsPerCategory);
                 const category = Object.keys(categoryScores)[categoryIndex];
                 categoryScores[category] += value;
             });
-            
+
             // Tunjukkan keputusan
             showResults(totalScore, categoryScores);
         }
-        
+
         function showResults(totalScore, categoryScores) {
             const resultDiv = document.getElementById('result');
             const stressLevel = document.getElementById('stressLevel');
             const stressDesc = document.getElementById('stressDescription');
             const stressTips = document.getElementById('stressTips');
-            
+
             let level = '', description = '', tips = '';
-            
+
             if (totalScore <= 20) {
                 level = 'Tahap Stress: Sangat Rendah 😊';
                 description = 'Tahniah! Anda mengendalikan tekanan dengan sangat baik.';
@@ -250,24 +226,24 @@
                     </ul>
                 `;
             }
-            
+
             stressLevel.textContent = level;
             stressDesc.textContent = description;
             stressTips.innerHTML = tips;
-            
+
             // Buat carta
             createStressChart(categoryScores);
-            
+
             resultDiv.classList.remove('hidden');
             form.classList.add('hidden');
             resultDiv.scrollIntoView({ behavior: 'smooth' });
         }
-        
+
         function createStressChart(categoryScores) {
             const ctx = document.getElementById('stressChart').getContext('2d');
             const categories = Object.keys(categoryScores);
             const scores = Object.values(categoryScores);
-            
+
             new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -303,7 +279,7 @@
                 }
             });
         }
-        
+
         function resetForm() {
             document.getElementById('stressForm').reset();
             document.getElementById('result').classList.add('hidden');
@@ -312,4 +288,5 @@
         }
     </script>
 </body>
+
 </html>

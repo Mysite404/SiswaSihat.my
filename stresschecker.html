@@ -130,12 +130,16 @@
                     questionDiv.className = 'question';
                     questionDiv.innerHTML = `
                         <p>${questionNumber}. ${question}</p>
-                        <div class="likert-scale">
-                            <label><input type="radio" name="q${questionNumber}" value="1" required> 1 (Sangat Tidak Setuju)</label>
+                        <div class="likert-scale, scale-option">
+                            <label><input type="radio" name="q${questionNumber}" value="1" required> 1</label>
                             <label><input type="radio" name="q${questionNumber}" value="2"> 2</label>
                             <label><input type="radio" name="q${questionNumber}" value="3"> 3</label>
                             <label><input type="radio" name="q${questionNumber}" value="4"> 4</label>
-                            <label><input type="radio" name="q${questionNumber}" value="5"> 5 (Sangat Setuju)</label>
+                            <label><input type="radio" name="q${questionNumber}" value="5"> 5</label>
+                            <div class="scale-labels">
+                        <span>Sangat Tidak Setuju</span>
+                        <span>Sangat Setuju</span>
+                    </div>
                         </div>
                     `;
                     categoryDiv.appendChild(questionDiv);

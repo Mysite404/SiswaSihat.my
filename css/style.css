@@ -154,7 +154,7 @@ body {
     .nav-container {
         padding: 0 1.5rem;
     }
-    
+
     .nav-links {
         position: fixed;
         top: 70px;
@@ -172,39 +172,40 @@ body {
         transition: transform 0.3s ease-in-out;
         z-index: 999;
     }
-    
+
     .nav-links.active {
         transform: translateX(0);
     }
-    
+
     .nav-links a {
         width: 80%;
         text-align: center;
         padding: 1rem;
         margin: 0;
     }
-    
+
     .hamburger {
         display: block;
     }
-    
+
     /* Prevent scrolling when menu is open */
     body.menu-open {
         overflow: hidden;
     }
 }
+
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 40px 0;
     margin-bottom: 30px;
     background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero h1 {
@@ -226,7 +227,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     margin: 30px 0;
-    
+
 }
 
 .info-card {
@@ -247,7 +248,8 @@ body {
     font-size: 1.3rem;
 }
 
-.info-card ul, .info-card ol {
+.info-card ul,
+.info-card ol {
     padding-left: 20px;
     margin-bottom: 15px;
 }
@@ -265,12 +267,12 @@ body {
     max-width: 600px;
     margin: 0 auto 40px;
     background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .form-group {
@@ -284,7 +286,7 @@ body {
     color: var(--dark-text);
 }
 
-.form-group input, 
+.form-group input,
 .form-group select {
     width: 100%;
     padding: 12px 15px;
@@ -295,7 +297,7 @@ body {
     transition: border 0.3s ease;
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group select:focus {
     outline: none;
     border-color: var(--secondary-color);
@@ -322,7 +324,8 @@ body {
 }
 
 /* Buttons */
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     display: inline-block;
     padding: 12px 25px;
     border: none;
@@ -362,12 +365,12 @@ body {
     box-shadow: var(--shadow);
     margin: 20px 0;
     background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .result-card p {
@@ -437,27 +440,27 @@ footer {
     color: var(--white);
 }
 
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero .lead {
-        font-size: 1rem;
-    }
-    
-    .calculator {
-        padding: 20px;
-    }
-    
-    .likert-scale {
-        flex-wrap: wrap;
-    }
-    
-    .likert-scale label {
-        width: 45%;
-        margin-bottom: 10px;
-    }
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero .lead {
+    font-size: 1rem;
+}
+
+.calculator {
+    padding: 20px;
+}
+
+.likert-scale {
+    flex-wrap: wrap;
+}
+
+.likert-scale label {
+    width: 45%;
+    margin-bottom: 10px;
+}
 
 @media (max-width: 480px) {
     .likert-scale label {
@@ -472,12 +475,12 @@ footer {
     padding-bottom: 1rem;
     border-bottom: 1px solid #eee;
     background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .likert-scale {
@@ -529,13 +532,13 @@ footer {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .likert-scale label {
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
     }
-    
+
     .likert-scale input[type="radio"] {
         margin-right: 0.5rem;
         margin-bottom: 0;
@@ -564,7 +567,8 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.cause-card, .cause-card2 :hover {
+.cause-card,
+.cause-card2 :hover {
     transform: translateY(-5px);
 }
 
@@ -590,7 +594,8 @@ footer {
     line-height: 1.6;
 }
 
-.obesity-list, .social-list {
+.obesity-list,
+.social-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
@@ -649,4 +654,47 @@ footer {
     border-radius: 8px;
     color: #ff5252;
     margin: 1rem 0;
+}
+
+/* STRESS FORM */
+.likert-scale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scale-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.scale-option input[type="radio"] {
+    display: none;
+}
+
+.scale-option label {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fff;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.scale-option input[type="radio"]:checked+label {
+    background: linear-gradient(45deg, #3b82f6, #10b981);
+    border-color: #3b82f6;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }

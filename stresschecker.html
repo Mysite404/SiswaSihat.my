@@ -86,7 +86,7 @@
                     questionDiv.className = 'question';
                     questionDiv.innerHTML = `
                         <p>${questionNumber}. ${question}</p>
-                        <div class="scale-option">
+                        <div style=".scale-option input[type="radio"]:checked+label { background: #4ade80 !important; border-color: #3b82f6; color: white; transform: scale(1.05); box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3); }" class="scale-option">
                             <label><input class="radio" type="radio" name="q${questionNumber}" value="1" required> 1</label>
                             <label><input class="radio" type="radio" name="q${questionNumber}" value="2"> 2</label>
                             <label><input class="radio" type="radio" name="q${questionNumber}" value="3"> 3</label>

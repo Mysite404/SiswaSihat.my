@@ -66,14 +66,10 @@
     <script src="js/script.js"></script>
     <script>
         // Soalan langsung dalam JavaScript jika fetch tidak berfungsi
-        const soalanData = (async () => {
-            try {
-                const data = await (await fetch('js/soalan.json')).json();
-                console.log(data);
-            } catch (err) {
-                console.error('Fetch error:', err);
-            }
-        })();
+        const soalanData = fetch('js/soalan.json')
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.error('Error:', err));
 
         // Muat soalan ketika halaman dimuat
         document.addEventListener('DOMContentLoaded', function () {

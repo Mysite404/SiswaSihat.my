@@ -67,7 +67,7 @@
     <script>
         async function loadSoalanData() {
             try {
-                const response = await fetch('soalan.json');
+                const response = await fetch('/js/soalan.json');
                 if (!response.ok) {
                     throw new Error('Failed to load question data');
                 }

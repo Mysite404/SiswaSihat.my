@@ -65,29 +65,15 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/script.js"></script>
     <script>
-        async function loadSoalanData() {
+        // Soalan langsung dalam JavaScript jika fetch tidak berfungsi
+        const soalanData = (async () => {
             try {
-                const response = await fetch('js/soalan.json');
-                if (!response.ok) {
-                    throw new Error('Failed to load question data');
-                }
-                const soalanData = await response.json();
-                return soalanData;
-            } catch (error) {
-                console.error('Error loading question data:', error);
-                return null;
+                const data = await (await fetch('js/soalan.json')).json();
+                console.log(data);
+            } catch (err) {
+                console.error('Fetch error:', err);
             }
-        }
-
-        // Gunakan fungsi ini untuk memuat soalan
-        loadSoalanData().then(data => {
-            if (data) {
-                // Di sini anda boleh memproses data seperti sebelumnya
-                console.log(data.soalan);
-                // Panggil fungsi anda yang menggunakan data ini
-                // contoh: muatSoalan(data);
-            }
-        });
+        })();
 
         // Muat soalan ketika halaman dimuat
         document.addEventListener('DOMContentLoaded', function () {

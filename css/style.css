@@ -706,7 +706,3 @@ footer {
     font-size: 0.9rem;
     color: #64748b;
 }
-
-.scale-option input[type="radio"] {
-    display: contents;
-}

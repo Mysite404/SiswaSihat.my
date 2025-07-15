@@ -684,7 +684,7 @@ footer {
 .scale-option input[type="radio"]:checked+label {
     background: #bde6bf;
     border-color: #3b82f6;
-    color: #a5ffaa;
+    color: #ffffff;
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }
@@ -732,11 +732,4 @@ footer {
 .scale-option label:hover {
     border-color: #86b98e;
     background: rgba(66, 153, 225, 0.1);
-}
-
-.scale-option input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
 }
